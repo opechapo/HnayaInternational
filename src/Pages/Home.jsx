@@ -39,6 +39,73 @@ const Home = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, [slides.length]);
 
+  // State for clicked image
+  const [selectedWork, setSelectedWork] = useState(null);
+
+  // Work items data
+  const workItems = [
+    {
+      image: "https://via.placeholder.com/400x250?text=PR+Campaign",
+      title: "Strategic PR Launch for Luxury Auto Expo",
+      description:
+        "Orchestrated a high-profile press event for a luxury car brand's African debut, showcasing premium models like the Mercedes S-Class.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Medical+PR",
+      title: "Media Rollout for Advanced MRI Systems",
+      description:
+        "Managed a successful PR campaign for a new MRI scanner rollout across Nigerian hospitals, highlighting cutting-edge medical tech.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Luxury+Event",
+      title: "Luxury Car Rental Showcase Event",
+      description:
+        "Planned and executed an exclusive event featuring BMW X7 rentals for elite clients in Lagos, boosting brand visibility.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Medical+Endorsement",
+      title: "Endorsement Campaign for Surgical Robots",
+      description:
+        "Collaborated with top surgeons to endorse a new surgical robot, enhancing its adoption in West African medical facilities.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=PR+Strategy",
+      title: "Brand Strategy for Renewable Energy Firm",
+      description:
+        "Developed a comprehensive PR strategy for a renewable energy company entering the African market, focusing on sustainability.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Luxury+PR",
+      title: "PR Support for Luxury Car Auction",
+      description:
+        "Provided media coverage and influencer engagement for a high-stakes luxury car auction featuring rare models.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Medical+Campaign",
+      title: "Awareness Campaign for Medical Equipment",
+      description:
+        "Launched a nationwide campaign to promote affordable medical equipment rentals, targeting rural healthcare centers.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=General+PR",
+      title: "Influencer Campaign for Tech Innovation",
+      description:
+        "Partnered with influencers to promote a tech-driven PR initiative, connecting brands with African tech enthusiasts.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Luxury+Consulting",
+      title: "Consulting for Luxury Car Brand Expansion",
+      description:
+        "Advised a luxury car manufacturer on market entry strategies into East Africa, ensuring a seamless launch.",
+    },
+    {
+      image: "https://via.placeholder.com/400x250?text=Medical+Strategy",
+      title: "Strategic Planning for Hospital Equipment",
+      description:
+        "Crafted a long-term strategy for a medical equipment supplier to penetrate the South African healthcare market.",
+    },
+  ];
+
   return (
     <>
       {/* Hero Section with Carousel */}
@@ -71,7 +138,70 @@ const Home = () => {
         ))}
       </section>
 
-      {/* Rest of the content */}
+      {/* New Mission Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center max-w-4xl">
+          <h1 className="text-3xl font-bold text-deep-purple mb-6">
+            We are on a mission to build the next global African Brands.
+          </h1>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            With a presence in 8 African countries, we are committed to driving
+            the growth of the continent by providing organizations a
+            comprehensive approach with the speed and agility required to propel
+            their businesses forward.
+            <br />
+            <br />
+            Our research-based strategy means we kick-off our work with you by
+            immersing ourselves in your industry, your vision, your culture and
+            your market- working shoulder to shoulder with you to build creative
+            and strategic solutions to your challenges.
+          </p>
+          <button
+            onClick={() => (window.location.href = "mailto:info@hnaya.it.com")}
+            className="mt-8 bg-sky-blue text-white px-6 py-3 rounded hover:bg-fresh-green transition"
+          >
+            Got a project? Speak with Us
+          </button>
+        </div>
+      </section>
+
+      {/* Some of Our Work Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-deep-purple text-center mb-12">
+            Some of Our Work
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {workItems.map((work, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
+                  selectedWork === index
+                    ? "border-4 border-deep-purple scale-105"
+                    : "hover:shadow-lg hover:scale-105"
+                }`}
+                onClick={() =>
+                  setSelectedWork(index === selectedWork ? null : index)
+                }
+              >
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-deep-purple">
+                    {work.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{work.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted Across Continents Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-deep-purple mb-8">
