@@ -1,0 +1,61 @@
+import React from "react";
+
+const Footer = () => {
+  const whatsappNumber = "+2341234567890"; // Replace with your WhatsApp number
+
+  return (
+    <footer className="bg-deep-purple text-white py-8">
+      <div className="container mx-auto px-4 text-center">
+        <p className="mb-4">
+          © 2025 Hnaya International. All rights reserved. www.hnaya.it.com
+        </p>
+        <div className="flex justify-center space-x-4 mb-4">
+          <a
+            href="https://facebook.com/hnaya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://instagram.com/hnaya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://twitter.com/hnaya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter/X
+          </a>
+          <a
+            href="https://linkedin.com/company/hnaya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <button
+          onClick={() =>
+            window.open(`https://wa.me/${whatsappNumber}`, "_blank")
+          }
+          className="bg-fresh-green text-deep-purple px-4 py-2 rounded hover:bg-sky-blue transition mr-2"
+        >
+          WhatsApp
+        </button>
+        <button
+          onClick={() => (window.location.href = "mailto:info@hnaya.it.com")}
+          className="bg-sky-blue text-white px-4 py-2 rounded hover:bg-fresh-green transition"
+        >
+          Email Us
+        </button>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
