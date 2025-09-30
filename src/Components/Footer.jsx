@@ -4,12 +4,12 @@ const Footer = () => {
   const whatsappNumber = "+2341234567890"; // Replace with your WhatsApp number
 
   return (
-    <footer className="bg-deep-purple text-white py-8">
+    <footer className="bg-purple-700 text-black py-8">
       <div className="container mx-auto px-4 text-center">
         <p className="mb-4">
           © 2025 Hnaya International. All rights reserved. www.hnaya.it.com
         </p>
-        <div className="flex justify-center space-x-4 mb-4">
+        <div className="flex justify-center space-x-4 mb-4 cursor-pointer hover:text-white">
           <a
             href="https://facebook.com/hnaya"
             target="_blank"
@@ -43,13 +43,13 @@ const Footer = () => {
           onClick={() =>
             window.open(`https://wa.me/${whatsappNumber}`, "_blank")
           }
-          className="bg-fresh-green text-deep-purple px-4 py-2 rounded hover:bg-sky-blue transition mr-2"
+          className="bg-green-300 text-purple-700 px-4 py-2 rounded hover:bg-blue-300 transition mr-2 cursor-pointer"
         >
           WhatsApp
         </button>
         <button
           onClick={() => (window.location.href = "mailto:info@hnaya.it.com")}
-          className="bg-sky-blue text-white px-4 py-2 rounded hover:bg-fresh-green transition"
+          className="bg-blue-300 text-black px-4 py-2 rounded hover:bg-green-300 transition cursor-pointer"
         >
           Email Us
         </button>

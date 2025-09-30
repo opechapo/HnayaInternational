@@ -128,7 +128,7 @@ const Home = () => {
                 <p className="text-xl mb-6">{slide.subtitle}</p>
                 <button
                   onClick={() => (window.location.href = slide.buttonLink)}
-                  className="bg-sky-blue text-white px-6 py-3 rounded hover:bg-fresh-green transition"
+                  className="bg-blue-400 text-white px-6 py-3 rounded hover:bg-green-700 transition cursor-pointer"
                 >
                   {slide.buttonText}
                 </button>
@@ -158,7 +158,7 @@ const Home = () => {
           </p>
           <button
             onClick={() => (window.location.href = "mailto:info@hnaya.it.com")}
-            className="mt-8 bg-sky-blue text-white px-6 py-3 rounded hover:bg-fresh-green transition"
+            className="mt-8 bg-blue-400 text-black px-6 py-3 rounded hover:bg-green-300 transition cursor-pointer"
           >
             Got a project? Speak with Us
           </button>
@@ -168,7 +168,7 @@ const Home = () => {
       {/* Some of Our Work Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-deep-purple text-center mb-12">
+          <h2 className="text-3xl font-bold text-purple-700 text-center mb-12">
             Some of Our Work
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,7 +177,7 @@ const Home = () => {
                 key={index}
                 className={`bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
                   selectedWork === index
-                    ? "border-4 border-deep-purple scale-105"
+                    ? "border-4 border-purple-700 scale-105"
                     : "hover:shadow-lg hover:scale-105"
                 }`}
                 onClick={() =>
@@ -190,7 +190,7 @@ const Home = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold text-deep-purple">
+                  <h3 className="text-xl font-semibold text-purple-700">
                     {work.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{work.description}</p>
@@ -204,7 +204,7 @@ const Home = () => {
       {/* Trusted Across Continents Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-deep-purple mb-8">
+          <h2 className="text-3xl font-bold text-purple-700 mb-8">
             Trusted Across Continents
           </h2>
           <p className="text-lg mb-8">
@@ -212,7 +212,7 @@ const Home = () => {
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-sky-blue">
+              <h3 className="text-xl font-semibold text-blue-300">
                 Client Testimonial
               </h3>
               <p>
@@ -221,7 +221,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-sky-blue">
+              <h3 className="text-xl font-semibold text-blue-300">
                 Our Mission
               </h3>
               <p>
