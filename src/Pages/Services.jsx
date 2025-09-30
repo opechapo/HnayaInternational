@@ -1,6 +1,6 @@
 import React from "react";
-import ServicesList from "../components/ServiceList";
-import Gallery from "../components/Gallery";
+import ServicesList from "../Components/ServiceList";
+import Gallery from "../Components/Gallery";
 
 const luxuryItems = [
   {
