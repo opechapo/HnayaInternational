@@ -1,11 +1,17 @@
 import React from "react";
+import hnayaLogo from "../assets/hnaya_logo1.png"; // Import the logo image
 
 const Footer = () => {
   const whatsappNumber = "+2341234567890"; // Replace with your WhatsApp number
 
   return (
-    <footer className="bg-purple-700 text-black py-8">
+    <footer className="bg-purple-300 text-black py-8">
       <div className="container mx-auto px-4 text-center">
+        <img
+          src={hnayaLogo}
+          alt="Hnaya International Logo"
+          className="w-52 h-auto mb-6 mx-auto"
+        />
         <p className="mb-4">
           © 2025 Hnaya International. All rights reserved. www.hnaya.it.com
         </p>
