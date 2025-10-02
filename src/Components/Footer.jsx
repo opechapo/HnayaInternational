@@ -5,7 +5,7 @@ const Footer = () => {
   const whatsappNumber = "+2341234567890"; // Replace with your WhatsApp number
 
   return (
-    <footer className="bg-purple-300 text-black py-8">
+    <footer className="bg-purple-400 text-black py-8">
       <div className="container mx-auto px-4 text-center">
         <img
           src={hnayaLogo}

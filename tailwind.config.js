@@ -8,6 +8,9 @@ export default {
         "sky-blue": "#2CB5E8",
         "fresh-green": "#A5D63F",
       },
+      FontFamily: {
+        "cormorant-sc": ["Cormorant SC", "serif"],
+      },
     },
   },
   plugins: [],
