@@ -127,20 +127,21 @@ const Home = () => {
   return (
     <>
       {/* Hero Section with Carousel */}
-      <section className="relative h-190 text-white overflow-hidden rounded-lg">
+      <section className="relative min-h-screen text-white overflow-hidden rounded-lg">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute top-0 left-40 w-400 h-full transition-opacity rounded-lg  duration-1000 ${
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              borderRadius: "0.5rem", // Equivalent to rounded-lg
             }}
           >
-            <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center text-center p-4 sm:p-2 rounded-full">
+            <div className="text-center p-4 sm:p-2 bg-opacity-50 rounded-lg">
               <div>
                 <h1 className="text-8xl font-bold mb-4 md:text-6xl sm:text-4xl">
                   {slide.title}
@@ -188,12 +189,17 @@ const Home = () => {
                 With a presence in 8 African countries, we are committed to
                 driving the growth of the continent by providing organizations a
                 comprehensive approach with the speed and agility required to
-                propel their business forward. Our research-based strategy means
-                we kick-off our work with you by immersing ourselves in your
-                industry, your vision, your culture and your market - working
-                shoulder to shoulder with you to build creative and strategic
-                solutions to your challenges.
+                propel their business forward.
               </p>
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 md:text-lg sm:text-base">
+                Our research-based strategy means we kick-off our work with you
+                by immersing ourselves in your industry, your vision, your
+                culture and your market - working shoulder to shoulder with you
+                to build creative and strategic solutions to your challenges.
+              </p>
+              <br />
+              <br />
+              <br />
               <button
                 onClick={() =>
                   (window.location.href = "mailto:info@hnaya.it.com")
