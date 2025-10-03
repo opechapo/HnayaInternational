@@ -48,8 +48,8 @@ const Services = () => {
         </div>
       </section>
       <ServicesList />
-      <Gallery title="Luxury Cars Showcase" items={luxuryItems} />
-      <Gallery title="Medical Sector Showcase" items={medicalItems} />
+      {/* <Gallery title="Luxury Cars Showcase" items={luxuryItems} />
+      <Gallery title="Medical Sector Showcase" items={medicalItems} /> */}
     </>
   );
 };

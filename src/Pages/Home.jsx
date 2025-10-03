@@ -5,7 +5,7 @@ import luxuryCar from "../assets/luxury car.png"; // Import luxury car image
 import clientsImage from "../assets/clients.png"; // Import clients image
 import medical from "../assets/medical section.png"; // Import medical image
 import nextImage from "../assets/Next.png"; // Import background image for header
-import thunder from "../assets/thunder image.png"; // Import image for right side
+import thunder from "../assets/thunder image.png"; // Import image for right side;
 
 // Import images for "Some of Our Work" section
 import StrategicPRLaunchforLuxuryAutoExpo from "../assets/Strategic PR Launch for Luxury Auto Expo.jpg";
@@ -127,38 +127,63 @@ const Home = () => {
   return (
     <>
       {/* Hero Section with Carousel */}
-      <section className="relative min-h-screen text-white overflow-hidden rounded-lg">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              borderRadius: "0.5rem", // Equivalent to rounded-lg
-            }}
-          >
-            <div className="text-center p-4 sm:p-2 bg-opacity-50 rounded-lg">
-              <div>
-                <h1 className="text-8xl font-bold mb-4 md:text-6xl sm:text-4xl">
-                  {slide.title}
-                </h1>
-                <p className="text-4xl mb-6 md:text-2xl sm:text-xl">
-                  {slide.subtitle}
-                </p>
-                <button
-                  onClick={() => (window.location.href = slide.buttonLink)}
-                  className="bg-blue-400 text-white px-6 py-3 rounded hover:bg-green-700 transition cursor-pointer w-70 h-15 md:w-60 md:h-12 sm:w-40 sm:h-10"
-                >
-                  {slide.buttonText}
-                </button>
+      <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden mt-[-2px]">
+        <div
+          className="w-[1700px] h-[800px] mb-5 rounded-lg overflow-hidden relative 
+                        lg:w-[1400px] lg:h-[700px] 
+                        md:w-[1200px] md:h-[600px] 
+                        sm:w-[800px] sm:h-[400px] 
+                        xs:w-[500px] xs:h-[300px]"
+        >
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-opacity-50 rounded-lg"></div>
+              <div className="relative z-10 text-center flex items-center justify-center h-full p-4 sm:p-2">
+                <div>
+                  <h1
+                    className="text-8xl font-extrabold mb-4 text-white 
+                                lg:text-7xl 
+                                md:text-5xl 
+                                sm:text-3xl 
+                                xs:text-2xl"
+                  >
+                    {slide.title}
+                  </h1>
+                  <p
+                    className="text-3xl font-bold mb-4 text-white 
+                              lg:text-2xl 
+                              md:text-xl 
+                              sm:text-lg 
+                              xs:text-base"
+                  >
+                    {slide.subtitle}
+                  </p>
+                  <button
+                    onClick={() => (window.location.href = slide.buttonLink)}
+                    className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-green-700 transition cursor-pointer 
+                              lg:w-48 lg:h-12 lg:text-lg 
+                              md:w-40 md:h-10 md:text-base 
+                              sm:w-36 sm:h-9 sm:text-sm 
+                              xs:w-32 xs:h-8 xs:text-xs"
+                  >
+                    {slide.buttonText}{" "}
+                    {/* Fixed from {buttonText} to {slide.buttonText} */}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <br />

@@ -2,7 +2,7 @@ import React from "react";
 import hnayaLogo from "../assets/hnaya_logo1.png"; // Import the logo image
 
 const Footer = () => {
-  const whatsappNumber = "+2341234567890"; // Replace with your WhatsApp number
+  const whatsappNumber = "+2348188800000"; // Replace with your WhatsApp number
 
   return (
     <footer className="bg-purple-400 text-black py-8">
