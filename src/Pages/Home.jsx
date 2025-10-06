@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../Components/Hero";
-import marketingCampaign from "../assets/Marketing campaign.png"; // Import marketing image
 import luxuryCar from "../assets/luxury car.png"; // Import luxury car image
 import clientsImage from "../assets/clients.png"; // Import clients image
 import medical from "../assets/medical section.png"; // Import medical image
 import nextImage from "../assets/Next.png"; // Import background image for header
-import thunder from "../assets/thunder image.png"; // Import image for right side;
+import thunder from "../assets/thunder image.png"; // Import image for right side
+import newMarketing from "../assets/new marketing.jpg"; // Import image for right side
 
 // Import images for "Some of Our Work" section
 import StrategicPRLaunchforLuxuryAutoExpo from "../assets/Strategic PR Launch for Luxury Auto Expo.jpg";
@@ -23,7 +23,7 @@ const Home = () => {
   // Carousel data
   const slides = [
     {
-      image: marketingCampaign, // Replace with imported image
+      image: newMarketing,
       title: "Telling Stories that Move the World",
       subtitle:
         "Crafting global brand narratives with African excellence in Marketing & PR.",
@@ -31,7 +31,7 @@ const Home = () => {
       buttonLink: "mailto:info@hnaya.it.com",
     },
     {
-      image: luxuryCar, // Replace with imported image
+      image: luxuryCar,
       title: "Luxury Cars Showcase",
       subtitle:
         "Explore premium car sales and rentals with Hnaya's luxury solutions.",
@@ -39,7 +39,7 @@ const Home = () => {
       buttonLink: "mailto:info@hnaya.it.com",
     },
     {
-      image: medical, // Replace with imported image
+      image: medical,
       title: "Medical Sector Innovation",
       subtitle: "Advanced medical equipment for global healthcare excellence.",
       buttonText: "Speak with Us",
@@ -131,9 +131,9 @@ const Home = () => {
         <div
           className="w-[1700px] h-[800px] mb-5 rounded-lg overflow-hidden relative 
                         lg:w-[1400px] lg:h-[700px] 
-                        md:w-[1200px] md:h-[600px] 
-                        sm:w-[800px] sm:h-[400px] 
-                        xs:w-[500px] xs:h-[300px]"
+                        md:w-[700px] md:h-[400px] 
+                        sm:w-[500px] sm:h-[300px] 
+                        xs:w-[320px] xs:h-[250px]"
         >
           {slides.map((slide, index) => (
             <div
@@ -148,36 +148,35 @@ const Home = () => {
               }}
             >
               <div className="absolute inset-0 bg-opacity-50 rounded-lg"></div>
-              <div className="relative z-10 text-center flex items-center justify-center h-full p-4 sm:p-2">
+              <div className="relative z-10 text-center flex items-center justify-center h-full p-4 sm:p-3 xs:p-2">
                 <div>
                   <h1
-                    className="text-8xl font-extrabold mb-4 text-white 
-                                lg:text-7xl 
-                                md:text-5xl 
-                                sm:text-3xl 
-                                xs:text-2xl"
+                    className="text-7xl font-extrabold mb-4 text-white 
+                                lg:text-5xl 
+                                md:text-4xl 
+                                sm:text-2xl 
+                                xs:text-xl"
                   >
                     {slide.title}
                   </h1>
                   <p
                     className="text-3xl font-bold mb-4 text-white 
-                              lg:text-2xl 
-                              md:text-xl 
-                              sm:text-lg 
-                              xs:text-base"
+                              lg:text-xl 
+                              md:text-lg 
+                              sm:text-base 
+                              xs:text-sm"
                   >
                     {slide.subtitle}
                   </p>
                   <button
                     onClick={() => (window.location.href = slide.buttonLink)}
-                    className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-green-700 transition cursor-pointer 
+                    className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition cursor-pointer 
                               lg:w-48 lg:h-12 lg:text-lg 
                               md:w-40 md:h-10 md:text-base 
                               sm:w-36 sm:h-9 sm:text-sm 
                               xs:w-32 xs:h-8 xs:text-xs"
                   >
-                    {slide.buttonText}{" "}
-                    {/* Fixed from {buttonText} to {slide.buttonText} */}
+                    {slide.buttonText}
                   </button>
                 </div>
               </div>
@@ -248,8 +247,8 @@ const Home = () => {
       </section>
 
       {/* Some of Our Work Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-100 ">
+        <div className="container mx-auto px-4 cursor-pointer">
           <h2 className="text-5xl font-bold text-white text-center mb-8 bg-gradient-to-r from-purple-700 via-sky-400 to-green-400 rounded-full h-20 flex items-center justify-center md:text-4xl sm:text-3xl">
             Some of Our Work
           </h2>
@@ -259,7 +258,7 @@ const Home = () => {
                 key={index}
                 className={`bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
                   selectedWork === index
-                    ? "border-4 border-purple-700 scale-105"
+                    ? "border-4 border-gray-600 scale-105"
                     : "hover:shadow-lg hover:scale-105"
                 } md:w-full sm:w-full`}
                 onClick={() =>
@@ -272,7 +271,7 @@ const Home = () => {
                   className="w-full h-48 object-cover md:h-40 sm:h-32"
                 />
                 <div className="p-4 sm:p-2">
-                  <h3 className="text-xl font-semibold text-purple-700 md:text-lg sm:text-base">
+                  <h3 className="text-xl font-semibold text-gray-600 md:text-lg sm:text-base">
                     {work.title}
                   </h3>
                   <p className="text-gray-600 text-sm md:text-xs sm:text-xs">
@@ -328,10 +327,10 @@ const Home = () => {
           <br />
           <br />
           <br />
-          <div className="flex justify-center gap-6 mb-8">
+          <div className="flex flex-row flex-nowrap overflow-x-auto gap-6 mb-8 px-4 snap-x snap-mandatory md:justify-center">
             {/* Testimonial 1 */}
-            <div className="w-80 p-6 rounded-lg shadow-lg relative testimonial-card bg-[#8200DB] text-white transform rotate-10">
-              <p className="text-sm text-bold leading-relaxed flex items-center justify-center h-full z-10">
+            <div className="min-w-[300px] max-w-[200px] p-6 rounded-lg shadow-lg relative testimonial-card bg-[#8200DB] text-white transform rotate-10 snap-center">
+              <p className="text-sm leading-relaxed flex items-center justify-center h-full z-10">
                 Creative, committed, and hands-on — Hassan Abdelkarim Chaaban
                 and the Hnaya International team were a delight to work with.
                 Their impact was so impressive that we rehired them with our own
@@ -340,7 +339,7 @@ const Home = () => {
               </p>
             </div>
             {/* Testimonial 2 */}
-            <div className="w-80 p-6 rounded-lg shadow-lg relative testimonial-card bg-[#A100F2] text-white transform -rotate-10">
+            <div className="min-w-[300px] max-w-[300px] p-6 rounded-lg shadow-lg relative testimonial-card bg-[#A100F2] text-white transform -rotate-10 snap-center">
               <p className="text-sm leading-relaxed flex items-center justify-center h-full z-10">
                 Hnaya International has provided us with amazing support,
                 driving the visibility of the CASIO brand through strategic and
@@ -349,7 +348,7 @@ const Home = () => {
               </p>
             </div>
             {/* Testimonial 3 */}
-            <div className="w-80 p-6 rounded-lg shadow-lg relative testimonial-card bg-[#C200FF] text-white transform rotate-4">
+            <div className="min-w-[300px] max-w-[300px] p-6 rounded-lg shadow-lg relative testimonial-card bg-[#C200FF] text-white transform rotate-4 snap-center">
               <p className="text-sm leading-relaxed flex items-center justify-center h-full z-10">
                 Hnaya International's innovative approach significantly boosted
                 our market presence and visibility. – Nnaemeka Egeonu, CEO,
@@ -362,13 +361,6 @@ const Home = () => {
           <br />
           <br />
           <br />
-          {/* <h3 className="text-3xl font-bold text-purple-700 mb-4">
-            Our Mission
-          </h3>
-          <p className="text-lg text-gray-600 leading-relaxed md:text-base sm:text-sm">
-            We connect luxury, health, and marketing worlds for sustainable
-            growth.
-          </p> */}
         </div>
         {/* Inline CSS for testimonial card design */}
         <style>
@@ -390,6 +382,20 @@ const Home = () => {
               font-size: 24px;
               color: rgba(255, 255, 255, 0.7);
               z-index: 0;
+            }
+            .snap-x {
+              scroll-snap-type: x mandatory;
+            }
+            .snap-center {
+              scroll-snap-align: center;
+            }
+            /* Hide scrollbar but keep functionality */
+            .overflow-x-auto::-webkit-scrollbar {
+              display: none;
+            }
+            .overflow-x-auto {
+              -ms-overflow-style: none; /* IE and Edge */
+              scrollbar-width: none; /* Firefox */
             }
           `}
         </style>
