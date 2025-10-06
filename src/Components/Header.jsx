@@ -99,7 +99,7 @@ const Header = () => {
         {/* Speak with Us Button */}
         <button
           onClick={() => (window.location.href = "mailto:info@hnaya.it.com")}
-          className="hidden md:block bg-purple-700 text-white px-3 sm:px-4 py-2 rounded hover:bg-purple-500 transition text-base sm:text-lg md:text-xl"
+          className="hidden md:block bg-purple-700 text-white px-3 sm:px-4 py-2 rounded hover:bg-purple-500 transition text-base sm:text-lg md:text-xl cursor-pointer"
         >
           Speak with Us
         </button>
