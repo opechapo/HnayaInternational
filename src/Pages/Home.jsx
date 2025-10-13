@@ -189,6 +189,8 @@ const Home = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
 
       {/* New Mission Section */}
       <section className="py-16 bg-white">
